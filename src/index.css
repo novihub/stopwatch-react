@@ -1,8 +1,16 @@
+html, body {
+  min-height: 100dvh;
+}
+
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: hsl(0, 0%, 95%);
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 30vh);
 }
 
 .stopwatch {
@@ -25,8 +33,7 @@ body {
 }
 
 .controls {
-  font-size: 1.5rem;
-  font-weight: bold;
+
   padding: 10px 20px;
   margin: 5px;
   min-width: 125px;
@@ -35,6 +42,26 @@ body {
   cursor: pointer;
   color: white;
   transition: background-color 0.5s ease;
+}
+
+.controls button {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px;
+  transition: .3s ease;
+}
+
+.controls button:hover {
+  transform: scale(1.05);
+}
+
+.controls button:first-child {
+  border-radius: 10px 0 0 10px;
+}
+
+.controls button:last-child {
+  border-radius: 0 10px 10px 0;
 }
 
 .start-button {
